@@ -1,0 +1,242 @@
+.footer {
+    padding: 5rem 20rem;
+    background-color: #131313;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    color: #BCBCBC;
+    text-align: left;
+}
+
+/* Top row: name + description stacked left */
+.footer-top-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.footer-name {
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-transform: lowercase;
+    margin-bottom: 0.25rem;
+    color: #BCBCBC;
+}
+
+.footer-description {
+    font-size: 0.9rem;
+    color: #BCBCBC;
+    line-height: 1.4;
+}
+
+/* Social buttons row */
+.footer-socials {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.footer-social-btn {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    border: 1px solid #BCBCBC;
+    border-radius: 20px;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #BCBCBC;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-social-btn:hover {
+    background-color: #BCBCBC;
+    color: #131313;
+}
+
+/* Bottom row: navigation + subscribe */
+.footer-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+}
+
+/* Navigation */
+.footer-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1 1 300px;
+}
+
+.footer-navigation-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #BCBCBC;
+    margin-bottom: 0.25rem;
+}
+
+.footer-pages {
+    display: flex;
+    gap: 7rem;
+    flex-wrap: wrap;
+}
+
+.footer-page-link {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #BCBCBC;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.footer-page-link:hover {
+    color: #FFCE5C;
+}
+
+/* Subscribe */
+.footer-subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer-subscribe-text {
+    font-size: 1rem;
+    color: #BCBCBC;
+    margin-bottom: 0.5rem;
+}
+
+.footer-email-wrapper {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #BCBCBC;
+    width: 100%;
+    padding-bottom: 0.4rem;
+}
+
+.footer-email-input {
+    background: transparent;
+    border: none;
+    color: #BCBCBC;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    width: calc(100% - 40px);
+}
+
+.footer-submit-btn {
+    background-color: transparent;
+    border: none;
+    color: #BCBCBC;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: 10px;
+}
+
+.footer-submit-btn:hover {
+    color: #FFCE5C;
+}
+
+/* 📱 Responsive Styles */
+@media (max-width: 1200px) {
+    .footer {
+        padding: 4rem 8rem;
+    }
+
+    .footer-pages {
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer {
+        padding: 4rem 5rem;
+    }
+
+    .footer-pages {
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 3rem 2rem;
+    }
+
+    .footer-bottom-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .footer-socials {
+        flex-direction: column;
+    }
+
+    .footer-social-btn {
+        width: 100%;
+    }
+
+    .footer-navigation {
+        flex: unset;
+        /* disable flex-grow/shrink */
+        max-width: 100%;
+        /* take full width */
+        width: 100%;
+        /* explicitly full width */
+    }
+
+    .footer-pages {
+        justify-content: space-between;
+        /* spread out the page links */
+        flex-wrap: nowrap;
+        /* keep on one line */
+        width: 100%;
+        /* full width container */
+        gap: 1rem;
+        /* smaller gap to fit nicely */
+    }
+
+    .footer-subscribe {
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-name {
+        font-size: 1.5rem;
+    }
+
+    .footer-description {
+        font-size: 0.85rem;
+    }
+
+    .footer-page-link {
+        font-size: 0.95rem;
+    }
+
+    .footer-subscribe-text {
+        font-size: 0.95rem;
+    }
+
+    .footer-email-input {
+        font-size: 0.95rem;
+    }
+
+    .footer-submit-btn {
+        font-size: 1.3rem;
+    }
+}

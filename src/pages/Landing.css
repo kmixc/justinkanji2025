@@ -1,0 +1,716 @@
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12rem;
+}
+
+.hero-text h1 {
+    font-size: clamp(2rem, 6vw, 5rem);
+    font-weight: 600;
+    line-height: 1.2;
+    color: #1D1D1D;
+    transition: color 0.3s ease;
+}
+
+.highlight {
+    color: #BCBCBC;
+}
+
+.hero-text-with-bubbles-wrapper {
+    width: 100%;
+    /* This container stretches full width, so text can align left */
+}
+
+.hero-text-with-bubbles {
+    position: relative;
+    /* Keep bubbles nicely constrained */
+    margin: 0 auto;
+    overflow: visible;
+    /* to ensure bubbles can go outside container */
+}
+
+.bubbles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* bubbles styles here */
+}
+
+.hero-text {
+    position: relative;
+    font-size: 5rem;
+    text-align: left;
+    color: #1d1d1d;
+    padding: 2rem 0;
+}
+
+.see-more-btn {
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #f3f3f3;
+    background-color: #1d1d1d;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.see-more-btn:hover {
+    background-color: #e6b946;
+    color: #131313;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.25;
+    filter: blur(36px);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    mix-blend-mode: screen;
+}
+
+/* Extra large bubbles, some half off screen */
+
+.bubble1 {
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(135deg, #FFCE5C 0%, #86a5d9 50%, #e95995 100%);
+    top: -20%;
+    left: -15%;
+    animation: moveBubble1 25s ease-in-out infinite;
+}
+
+.bubble2 {
+    width: 450px;
+    height: 450px;
+    background: linear-gradient(135deg, #1D1D1D 0%, #BCBCBC 40%, #FFCE5C 100%);
+    top: 70%;
+    left: 5%;
+    animation: moveBubble2 22s ease-in-out infinite;
+}
+
+.bubble3 {
+    width: 550px;
+    height: 550px;
+    background: linear-gradient(135deg, #86a5d9 0%, #e95995 40%, #1D1D1D 100%);
+    top: 25%;
+    left: 85%;
+    animation: moveBubble3 28s ease-in-out infinite;
+}
+
+.bubble4 {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, #e95995 0%, #FFCE5C 50%, #BCBCBC 100%);
+    top: 85%;
+    left: 60%;
+    animation: moveBubble4 20s ease-in-out infinite;
+}
+
+.bubble5 {
+    width: 480px;
+    height: 480px;
+    background: linear-gradient(135deg, #BCBCBC 0%, #86a5d9 50%, #1D1D1D 100%);
+    top: 5%;
+    left: 90%;
+    animation: moveBubble5 24s ease-in-out infinite;
+}
+
+.bubble6 {
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(135deg, #e95995 0%, #FFCE5C 50%, #86a5d9 100%);
+    top: -200%;
+    left: 10%;
+    animation: moveBubble6 30s ease-in-out infinite;
+    z-index: -1;
+}
+
+.bubble7 {
+    width: 550px;
+    height: 550px;
+    background: linear-gradient(135deg, #1D1D1D 0%, #BCBCBC 50%, #e95995 100%);
+    top: -170%;
+    left: 105%;
+    animation: moveBubble7 27s ease-in-out infinite;
+    z-index: -1;
+}
+
+
+/* Movement animations with bigger movement */
+
+@keyframes moveBubble1 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(140px, 110px) scale(1.6);
+    }
+}
+
+@keyframes moveBubble2 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(-110px, -80px) scale(0.7);
+    }
+}
+
+@keyframes moveBubble3 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(-130px, 110px) scale(1.5);
+    }
+}
+
+@keyframes moveBubble4 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(90px, -90px) scale(0.7);
+    }
+}
+
+@keyframes moveBubble5 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(-110px, 80px) scale(1.7);
+    }
+}
+
+@keyframes moveBubble6 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(120px, -100px) scale(1.5);
+    }
+}
+
+@keyframes moveBubble7 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(-110px, -90px) scale(1.4);
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .hero-text-with-bubbles {
+        max-width: 100%;
+        padding: 2rem 1rem;
+    }
+
+    .hero-text-with-bubbles h1 {
+        font-size: 3rem;
+    }
+
+    .bubble {
+        opacity: 0.15;
+        filter: blur(24px);
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .bubble1 {
+        top: -10% !important;
+        left: -10% !important;
+    }
+
+    .bubble2 {
+        top: 60% !important;
+        left: 10% !important;
+    }
+
+    .bubble3 {
+        top: 20% !important;
+        left: 80% !important;
+    }
+
+    .bubble4 {
+        top: 75% !important;
+        left: 50% !important;
+    }
+
+    .bubble5 {
+        top: 10% !important;
+        left: 85% !important;
+    }
+}
+
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 4rem 12rem;
+    align-items: flex-start;
+}
+
+.about-left {
+    flex: 1 1 40%;
+}
+
+.about-right {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.about-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.about-heading .dark {
+    color: #1D1D1D;
+}
+
+.about-heading .gray {
+    color: #BCBCBC;
+}
+
+.about-heading .dash {
+    margin: 0 0.5rem;
+    color: #BCBCBC;
+}
+
+.about-btn {
+    border: 1px solid #1D1D1D;
+    background: transparent;
+    color: #1D1D1D;
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    text-decoration: none;
+    width: fit-content;
+    transition: background 0.3s, color 0.3s;
+}
+
+.about-btn:hover {
+    background: #1D1D1D;
+    color: #fff;
+}
+
+
+.cta-section {
+    padding: 4rem 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: #fff;
+    /* or whatever bg fits your design */
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.cta-links {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-link {
+    color: #1d1d1d;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-link:hover {
+    background-color: #1d1d1d;
+    color: #fff;
+}
+
+.cta-texts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cta-main-text {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #1d1d1d;
+}
+
+.cta-sub-text {
+    font-size: 4.5rem;
+    color: #bcbcbc;
+    font-weight: 700;
+}
+
+.cta-btn {
+    margin-top: 1rem;
+    background-color: #1D1D1D;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    border-radius: 20px;
+    color: #f3f3f3;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #FFCE5C;
+    color: #1d1d1d;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .cta-section {
+        padding: 2rem 3rem;
+    }
+
+    .cta-links {
+        gap: 1.5rem;
+    }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .about-heading {
+        font-size: 2rem;
+    }
+}
+
+/* Base styles remain unchanged */
+
+@media (max-width: 1440px) {
+    .hero-section {
+        padding: 0 6rem;
+    }
+
+    .hero-text {
+        font-size: 4rem;
+    }
+
+    .bubble1 {
+        width: 420px;
+        height: 420px;
+        top: -15%;
+        left: -10%;
+    }
+
+    .bubble2 {
+        width: 380px;
+        height: 380px;
+        top: 65%;
+        left: 7%;
+    }
+
+    .bubble3 {
+        width: 470px;
+        height: 470px;
+        top: 30%;
+        left: 80%;
+    }
+
+    .bubble4 {
+        width: 350px;
+        height: 350px;
+        top: 80%;
+        left: 55%;
+    }
+
+    .bubble5 {
+        width: 400px;
+        height: 400px;
+        top: 8%;
+        left: 90%;
+    }
+
+    .bubble6,
+    .bubble7 {
+        display: none;
+        /* Optional: hide largest bubbles on smaller desktops */
+    }
+}
+
+/* Responsive for smaller desktops and tablets */
+@media (max-width: 1024px) {
+    .about-section {
+        padding: 3rem 6rem;
+        gap: 1.5rem;
+    }
+
+    .about-left,
+    .about-right {
+        flex: 1 1 100%;
+        /* stack columns */
+    }
+
+    .about-heading {
+        font-size: 2.5rem;
+    }
+
+    .cta-section {
+        padding: 3rem 6rem;
+    }
+
+    .cta-main-text,
+    .cta-sub-text {
+        font-size: 3.5rem;
+    }
+
+    .cta-links {
+        gap: 2rem;
+    }
+
+    .hero-section {
+        padding: 0 3rem;
+    }
+
+    .hero-text {
+        font-size: 3.5rem;
+    }
+
+    .bubble {
+        opacity: 0.2;
+        filter: blur(28px);
+    }
+
+    .bubble1 {
+        width: 360px;
+        height: 360px;
+        top: -10%;
+        left: -8%;
+    }
+
+    .bubble2 {
+        width: 320px;
+        height: 320px;
+        top: 60%;
+        left: 8%;
+    }
+
+    .bubble3 {
+        width: 400px;
+        height: 400px;
+        top: 25%;
+        left: 75%;
+    }
+
+    .bubble4 {
+        width: 300px;
+        height: 300px;
+        top: 75%;
+        left: 50%;
+    }
+
+    .bubble5 {
+        width: 350px;
+        height: 350px;
+        top: 10%;
+        left: 85%;
+    }
+
+    .bubble6,
+    .bubble7 {
+        display: none;
+    }
+}
+
+/* Tablets and large phones */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        padding: 2rem 2rem;
+        gap: 1rem;
+    }
+
+    .about-left,
+    .about-right {
+        flex: 1 1 100%;
+    }
+
+    .about-heading {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .about-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cta-section {
+        padding: 2rem 3rem;
+    }
+
+    .cta-links {
+        gap: 0rem;
+        margin-bottom: 1.5rem;
+        width: 80%;
+    }
+
+    .cta-link {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem 0;
+        border-radius: 15px;
+    }
+
+    .cta-main-text,
+    .cta-sub-text {
+        font-size: 2.5rem;
+    }
+
+    .cta-btn {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .hero-section {
+        padding: 0 1.5rem;
+    }
+
+    .hero-text {
+        font-size: 2.5rem;
+    }
+
+    .bubble {
+        opacity: 0.15;
+        filter: blur(24px);
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .bubble1 {
+        top: -10% !important;
+        left: -10% !important;
+    }
+
+    .bubble2 {
+        top: 60% !important;
+        left: 10% !important;
+    }
+
+    .bubble3 {
+        top: 20% !important;
+        left: 80% !important;
+    }
+
+    .bubble4 {
+        top: 75% !important;
+        left: 50% !important;
+    }
+
+    .bubble5 {
+        top: 10% !important;
+        left: 85% !important;
+    }
+
+    .bubble6,
+    .bubble7 {
+        display: none !important;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 0 1rem;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(1.5rem, 8vw, 5rem);
+    }
+
+    .about-section {
+        padding: 1.5rem 1rem;
+        gap: 1rem;
+    }
+
+    .about-heading {
+        font-size: 1.6rem;
+    }
+
+    .about-btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .cta-section {
+        padding: 1.5rem 1.5rem;
+    }
+
+    .cta-links {
+        gap: 0.75rem;
+    }
+
+    .cta-main-text,
+    .cta-sub-text {
+        font-size: 1.8rem;
+    }
+
+    .cta-link {
+        font-size: 0.95rem;
+        padding: 0.5rem 0;
+    }
+
+    .cta-btn {
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+    }
+}

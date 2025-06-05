@@ -1,0 +1,243 @@
+/* Container */
+.selected-work-section {
+    padding: 4rem 12rem;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #131313;
+}
+
+/* Header Row */
+.selected-work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.selected-work-header .view-all {
+    border: 1px solid #131313;
+    padding: 0.4rem 1.2rem;
+    border-radius: 2rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.selected-work-header .view-all:hover {
+    background-color: #131313;
+    color: #f3f3f3;
+}
+
+/* Project Container */
+.project {
+    border-top: 1px solid #131313;
+    padding: 1.25rem 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project:last-child {
+    border-bottom: 1px solid #131313;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    color: #444;
+    max-width: 600px;
+    margin-top: 0.5rem;
+}
+
+.project-tags {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-tag {
+    border: 1px solid #131313;
+    border-radius: 2rem;
+    padding: 0.3rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.project-preview {
+    margin-top: 0;
+    background-color: transparent;
+    border-radius: 1rem;
+    max-height: 0;
+    width: 100%;
+    margin: auto auto;
+    max-width: 1600px;
+    transition: all 0.5s ease;
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.project-placeholder {
+    width: 100%;
+    height: 500px;
+    background: #3a3a3a;
+    border-radius: 1rem;
+}
+
+.project.open .project-preview {
+    margin-top: 1.5rem;
+    max-height: 500px;
+    background-color: transparent;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Responsive */
+
+/* Tablets and smaller desktops (up to 1024px) */
+@media (max-width: 1024px) {
+    .selected-work-section {
+        padding: 3rem 6rem;
+    }
+
+    .selected-work-header {
+        font-size: 1rem;
+    }
+
+    .selected-work-header .view-all {
+        font-size: 0.9rem;
+        padding: 0.35rem 1rem;
+    }
+
+    .project-name {
+        font-size: 1.1rem;
+    }
+
+    .project-description {
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .project-tags {
+        gap: 0.75rem;
+    }
+
+    .project-tag {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.8rem;
+    }
+}
+
+/* Tablets and large phones (up to 768px) */
+@media (max-width: 768px) {
+    .selected-work-section {
+        padding: 2rem 3rem;
+    }
+
+    .selected-work-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        font-size: 1rem;
+    }
+
+    .selected-work-header .view-all {
+        width: 100%;
+        justify-content: center;
+        padding: 0.5rem 0;
+        font-size: 1rem;
+        border-radius: 10px;
+    }
+
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .project-description {
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .project-tags {
+        margin-top: 0.75rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .project-tag {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    .project-placeholder {
+        height: 300px;
+    }
+
+    .project.open .project-preview {
+        max-height: 300px;
+    }
+}
+
+/* Mobile phones (up to 480px) */
+@media (max-width: 480px) {
+    .selected-work-section {
+        padding: 1.5rem 1.5rem;
+    }
+
+    .selected-work-header {
+        font-size: 0.95rem;
+    }
+
+    .selected-work-header .view-all {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .project-name {
+        font-size: 1rem;
+    }
+
+    .project-description {
+        font-size: 0.85rem;
+    }
+
+    .project-tags {
+        gap: 0.4rem;
+    }
+
+    .project-tag {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
+    }
+
+    .project-placeholder {
+        height: 250px;
+    }
+
+    .project.open .project-preview {
+        max-height: 250px;
+    }
+}
