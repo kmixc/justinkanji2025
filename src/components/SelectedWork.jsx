@@ -2,6 +2,10 @@ import React, { useState, useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import './SelectedWork.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
+
 const projects = [
     {
         id: 1,
@@ -58,7 +62,7 @@ export default function SelectedWork() {
         <section className="selected-work-section">
             <div className="selected-work-header">
                 <h2>Selected Work</h2>
-                <button className="view-all">View All →</button>
+                <button className="view-all">View All <FontAwesomeIcon className='arrow' icon={faArrowRight} /></button>
             </div>
 
             {projects.map((project, index) => (

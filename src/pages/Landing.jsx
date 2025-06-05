@@ -4,6 +4,9 @@ import './Landing.css'
 import WorkSlider from '../components/WorkSlider'
 import SelectedWork from '../components/SelectedWork'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 
 export default function Landing() {
     const selectedWorkRef = useRef(null);
@@ -53,7 +56,7 @@ export default function Landing() {
                 <div className="about-right">
                     <p>I’ve built a path that merges design, storytelling and live experiences. Whether I’m behind the screen crafting or visuals or on-site coordinating events. I bring a mix of creativity, structure, and intention to everything I do. My background as a self-employed designer and event coordinator has given me a unique lens on how ideas come to life - form concept to execution.</p>
                     <p>Scroll down to dive into my story, work and what drives me</p>
-                    <Link to="/about" className="about-btn">About Me →</Link>
+                    <Link to="/about" className="about-btn">About Me <FontAwesomeIcon className='arrow' icon={faArrowRight} /></Link>
                 </div>
             </section>
 
