@@ -554,8 +554,8 @@
     }
 
     .about-heading {
-        font-size: 2rem;
-        text-align: center;
+        font-size: 3rem;
+        text-align: justify;
     }
 
     .about-btn {
@@ -651,7 +651,7 @@
     }
 
     .about-heading {
-        font-size: 1.6rem;
+        font-size: 2.4rem;
     }
 
     .about-btn {
