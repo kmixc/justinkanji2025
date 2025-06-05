@@ -62,7 +62,7 @@ export default function SelectedWork() {
         <section className="selected-work-section">
             <div className="selected-work-header">
                 <h2>Selected Work</h2>
-                <button className="view-all">View All <FontAwesomeIcon className='arrow' icon={faArrowRight} /></button>
+                <button className="view-all">View All <FontAwesomeIcon icon={faArrowRight} /></button>
             </div>
 
             {projects.map((project, index) => (

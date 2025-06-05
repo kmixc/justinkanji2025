@@ -22,12 +22,14 @@
     padding: 0.4rem 1.2rem;
     border-radius: 2rem;
     font-size: 0.95rem;
-    cursor: pointer;
     background: transparent;
+    color: #1d1d1d;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     transition: all 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .selected-work-header .view-all:hover {

@@ -454,12 +454,6 @@
         top: 8%;
         left: 90%;
     }
-
-    .bubble6,
-    .bubble7 {
-        display: none;
-        /* Optional: hide largest bubbles on smaller desktops */
-    }
 }
 
 /* Responsive for smaller desktops and tablets */
@@ -606,12 +600,15 @@
     }
 
     .bubble {
-        opacity: 0.15;
-        filter: blur(24px);
-        width: 200px !important;
-        height: 200px !important;
+        opacity: 0.35;
+        /* increase from 0.15 to 0.35 */
+        filter: blur(12px);
+        /* reduce blur for clarity */
+        width: 250px !important;
+        height: 250px !important;
     }
 
+    /* Optional: tweak individual positions so they appear better */
     .bubble1 {
         top: -10% !important;
         left: -10% !important;
@@ -635,11 +632,6 @@
     .bubble5 {
         top: 10% !important;
         left: 85% !important;
-    }
-
-    .bubble6,
-    .bubble7 {
-        display: none !important;
     }
 }
 
