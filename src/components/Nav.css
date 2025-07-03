@@ -54,6 +54,12 @@ html {
     font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
+    transition: 0.3s;
+}
+
+.name-link:hover {
+    color: #FFCE5C;
+    /* Highlight color on hover */
 }
 
 .name-link .first {
@@ -62,6 +68,14 @@ html {
 
 .name-link .last {
     color: #bfbfbf;
+}
+
+.name-link .first:hover {
+    color: #FFCE5C;
+}
+
+.name-link .last:hover {
+    color: #FFCE5C;
 }
 
 /* ===== Action Buttons ===== */
