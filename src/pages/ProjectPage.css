@@ -29,15 +29,32 @@
 }
 
 .project-description h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
-.project-description p {
+.project-description .project-description-text {
     font-size: 1rem;
     line-height: 1.7;
     color: #333;
+}
+
+.project-description-text {
+    margin-bottom: 2rem;
+}
+
+.project-extra-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.project-extra-images img {
+    width: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
 }
 
 .project-back-link {
@@ -47,47 +64,114 @@
 }
 
 .project-back-link a {
-    font-size: 5rem;
+    font-size: 3rem;
     text-decoration: none;
     font-weight: bold;
     color: #131313;
     cursor: pointer;
+    transition: 0.5s;
 }
-
 
 .project-back-link a:hover {
     color: #FFCE5C;
-    transition: 0.5s;
 }
 
 .project-not-found-page {
     padding: 4rem 2rem;
-    height: 80vh;
+    min-height: 60vh;
     color: #1D1D1D;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .project-not-found-message {
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
 .project-not-found-back {
     display: inline-block;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem;
     background-color: #BCBCBC;
     color: #131313;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
     transition: background-color 0.3s, color 0.3s;
 }
-
 
 .project-not-found-back:hover {
     background-color: #131313;
     color: #BCBCBC;
+}
+
+/* ================================
+   TABLET: Adjust grid & titles 
+=================================== */
+@media (min-width: 768px) {
+    .project-title {
+        font-size: 3rem;
+    }
+
+    .project-extra-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-extra-images img:nth-child(3) {
+        grid-column: 1 / -1;
+    }
+
+    .project-back-link a {
+        font-size: 4rem;
+    }
+}
+
+/* ================================
+   DESKTOP: Bigger hero title 
+=================================== */
+@media (min-width: 1024px) {
+    .project-title {
+        font-size: 4rem;
+    }
+
+    .project-back-link a {
+        font-size: 5rem;
+    }
+}
+
+/* ================================
+   SMALL MOBILE: Tighter spacing 
+=================================== */
+@media (max-width: 480px) {
+    .project-page {
+        padding: 3rem 1.2rem;
+    }
+
+    .project-title {
+        font-size: 2.2rem;
+    }
+
+    .project-label {
+        font-size: 0.9rem;
+    }
+
+    .project-description .project-description-text {
+        font-size: 0.95rem;
+    }
+
+    .project-back-link {
+        padding: 3rem 0;
+    }
+
+    .project-back-link a {
+        font-size: 2rem;
+    }
+
+    .project-not-found-message {
+        font-size: 2.5rem;
+    }
 }

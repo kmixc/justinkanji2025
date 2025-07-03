@@ -13,6 +13,7 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Preloader from './components/Preloader';
 import PageTransition from './components/PageTransition';
+import ScrollToTop from './components/ScrollToTop';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <PageTransition />
       <Preloader />
       <Nav />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/about" element={<About />} />

@@ -8,6 +8,10 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 //Images
 import FNTSY from '../assets/fntsy-project.png';
 import Cradle from '../assets/cradle-project.png';
+import Chariot from '../assets/chariot-project.png';
+import FlexInc from '../assets/flexinc-project.png';
+import EduNest from '../assets/edunest-project.png';
+import { Link } from 'react-router-dom';
 
 
 const projects = [
@@ -29,19 +33,22 @@ const projects = [
         id: 3,
         name: 'Chariot',
         description: 'An all-in-one app for those looking to get a premium ride-sharing experience.',
-        tags: ['UX/UI', 'Branding']
+        tags: ['UX/UI', 'Branding'],
+        image: Chariot
     },
     {
         id: 4,
         name: 'Flex Inc.',
         description: 'Work-life balance, automated. Your personal assistant for hybrid living.',
-        tags: ['UX/UI', 'Branding']
+        tags: ['UX/UI', 'Branding'],
+        image: FlexInc
     },
     {
         id: 5,
         name: 'EduNest',
         description: 'Your campus. Your courses. Your way. A new take on UW Learn.',
-        tags: ['UX/UI', 'Branding']
+        tags: ['UX/UI', 'Branding'],
+        image: EduNest
     }
 ];
 
@@ -68,7 +75,7 @@ export default function SelectedWork() {
         <section className="selected-work-section">
             <div className="selected-work-header">
                 <h2>Selected Work</h2>
-                <button className="view-all">View All <FontAwesomeIcon icon={faArrowRight} /></button>
+                <Link to="/work" className="view-all">View All <FontAwesomeIcon icon={faArrowRight} /></Link>
             </div>
 
             {projects.map((project, index) => (

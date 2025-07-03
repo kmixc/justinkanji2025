@@ -3,6 +3,7 @@ import './Footer.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
@@ -26,10 +27,10 @@ const Footer = () => {
                 <div className="footer-navigation">
                     <div className="footer-navigation-title">Navigation</div>
                     <div className="footer-pages">
-                        <a href="/" className="footer-page-link">Home</a>
-                        <a href="/about" className="footer-page-link">About</a>
-                        <a href="/work" className="footer-page-link">Work</a>
-                        <a href="/contact" className="footer-page-link">Contact</a>
+                        <Link to="/" className="footer-page-link">Home</Link>
+                        <Link to="/about" className="footer-page-link">About</Link>
+                        <Link to="/work" className="footer-page-link">Work</Link>
+                        <Link to="/contact" className="footer-page-link">Contact</Link>
                     </div>
                 </div>
 

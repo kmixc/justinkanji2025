@@ -63,8 +63,8 @@ export default function Landing() {
 
             <section className="cta-section">
                 <div className="cta-links">
-                    <a href="/about" className="cta-link">About Me</a>
-                    <a href="/work" className="cta-link">My Work</a>
+                    <Link to="/about" className="cta-link">About Me</Link>
+                    <Link to="/work" className="cta-link">My Work</Link>
                 </div>
 
                 <div className="cta-texts">
@@ -72,7 +72,7 @@ export default function Landing() {
                     <p className="cta-sub-text">Let’s team up.</p>
                 </div>
 
-                <button className="cta-btn">Let’s Connect</button>
+                <Link to="/contact" className="cta-btn">Let’s Connect</Link>
             </section>
 
         </div>

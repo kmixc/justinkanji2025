@@ -31,9 +31,27 @@ export default function ProjectPage() {
                 <img src={project.image} alt={project.title} />
             </div>
             <div className="project-description">
-                <h3>About</h3>
-                <p>{project.about}</p>
+                <div className="project-description-text">
+                    <h3>About</h3>
+                    <p>{project.about}</p>
+                </div>
+                <div className="project-description-text">
+                    <h3>Challenge</h3>
+                    <p>{project.challenge}</p>
+                </div>
+                <div className="project-description-text">
+                    <h3>Results</h3>
+                    <p>{project.results}</p>
+                </div>
             </div>
+
+            {project.images && project.images.length > 0 && (
+                <div className="project-extra-images">
+                    {project.images.map((img, index) => (
+                        <img key={index} src={img} alt={`${project.title} Extra ${index + 1}`} />
+                    ))}
+                </div>
+            )}
 
             <div className="project-back-link">
                 <Link to="/work" >
