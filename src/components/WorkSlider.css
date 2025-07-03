@@ -17,11 +17,16 @@
     display: block;
 }
 
-/* Responsive */
+
+/* ✅ Responsive: scale down images on tablets & phones */
 @media (max-width: 768px) {
-    .marquee-box {
-        width: 300px;
+    .marquee-item img {
         height: 300px;
-        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .marquee-item img {
+        height: 200px;
     }
 }
