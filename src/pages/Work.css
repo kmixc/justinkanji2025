@@ -1,0 +1,150 @@
+/* ===== Work Hero Container ===== */
+.work-hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    font-family: 'Inter', sans-serif;
+    color: #1D1D1D;
+}
+
+/* ===== Work Hero Heading ===== */
+.work-hero>div:first-child p:first-child {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.work-hero>div:first-child p:last-child {
+    font-size: 7rem;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.work-hero span {
+    color: #BCBCBC;
+    font-weight: 600;
+}
+
+/* ===== Project List ===== */
+.work-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+/* ===== Project Item ===== */
+.work-project-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.work-project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Project Info Row ===== */
+.work-project-item-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.work-project-item-info-title {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+}
+
+.work-project-item-info-title p:first-child {
+    font-size: 1.1rem;
+}
+
+.work-project-item-info-title p:last-child {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #888;
+    margin-top: 0.2rem;
+}
+
+.work-project-item-info-description {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+    margin-left: 2rem;
+    text-align: center;
+}
+
+.work-project-item-info-arrow {
+    margin-left: 2rem;
+    color: #1D1D1D;
+    font-size: 1rem;
+    border: 1px solid #1D1D1D;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.work-project-item-info-arrow:hover {
+    color: #FFCE5C;
+    border-color: #FFCE5C;
+}
+
+@media (max-width: 1024px) {
+    .work-hero>div:first-child p:last-child {
+        font-size: 5rem;
+    }
+
+    .work-project-item-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .work-project-item-info-description {
+        margin: 1rem 0;
+    }
+
+    .work-project-item-info-arrow {
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .work-hero {
+        padding: 2rem 1rem;
+    }
+
+    .work-hero>div:first-child p:first-child {
+        text-align: center;
+    }
+
+    .work-hero>div:first-child p:last-child {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .work-project-item-info {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+
+    .work-project-item-info-description {
+        margin: 1rem 0;
+    }
+
+    .work-project-item-info-arrow {
+        margin: 0;
+    }
+}

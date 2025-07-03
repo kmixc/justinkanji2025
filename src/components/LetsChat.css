@@ -1,0 +1,42 @@
+.lets-chat {
+    background-color: #131313;
+    color: white;
+    padding: 4rem 20rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.lets-chat .text {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.lets-chat .email-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.lets-chat .email {
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 6rem;
+}
+
+.lets-chat .email .colour {
+    color: #BCBCBC;
+}
+
+.lets-chat .circle {
+    margin-left: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f39c12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}

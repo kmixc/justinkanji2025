@@ -8,16 +8,13 @@
     flex-shrink: 0;
 }
 
-.marquee-box {
-    width: 500px;
+.marquee-item img {
     height: 500px;
-    background: #1d1d1d;
-    border-radius: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    font-size: 1.5rem;
+    width: 500px;
+    width: auto;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    display: block;
 }
 
 /* Responsive */

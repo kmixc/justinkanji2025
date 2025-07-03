@@ -7,7 +7,6 @@ import SelectedWork from '../components/SelectedWork'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-
 export default function Landing() {
     const selectedWorkRef = useRef(null);
 

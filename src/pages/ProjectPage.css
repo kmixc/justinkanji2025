@@ -1,0 +1,93 @@
+.project-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    font-family: 'Inter', sans-serif;
+    color: #1D1D1D;
+}
+
+.project-label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.project-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.project-hero-image img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.project-description {
+    margin-top: 2rem;
+}
+
+.project-description h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.project-description p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+.project-back-link {
+    display: flex;
+    justify-content: center;
+    padding: 5rem 2rem;
+}
+
+.project-back-link a {
+    font-size: 5rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: #131313;
+    cursor: pointer;
+}
+
+
+.project-back-link a:hover {
+    color: #FFCE5C;
+    transition: 0.5s;
+}
+
+.project-not-found-page {
+    padding: 4rem 2rem;
+    height: 80vh;
+    color: #1D1D1D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-not-found-message {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.project-not-found-back {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #BCBCBC;
+    color: #131313;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.project-not-found-back:hover {
+    background-color: #131313;
+    color: #BCBCBC;
+}

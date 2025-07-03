@@ -91,6 +91,8 @@
     border-radius: 1rem;
     max-height: 0;
     width: 100%;
+    aspect-ratio: 1 / 1;
+    /* 💡 NEW: make it a square */
     margin: auto auto;
     max-width: 1600px;
     transition: all 0.5s ease;
@@ -100,12 +102,15 @@
     overflow: hidden;
 }
 
-.project-placeholder {
+.project-image {
     width: 100%;
-    height: 500px;
-    background: #3a3a3a;
+    height: 100%;
+    object-fit: cover;
+    /* 💡 Make the image fully fill the square */
     border-radius: 1rem;
+    display: block;
 }
+
 
 .project.open .project-preview {
     margin-top: 1.5rem;

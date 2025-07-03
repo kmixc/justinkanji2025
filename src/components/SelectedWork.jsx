@@ -5,19 +5,25 @@ import './SelectedWork.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
+//Images
+import FNTSY from '../assets/fntsy-project.png';
+import Cradle from '../assets/cradle-project.png';
+
 
 const projects = [
     {
         id: 1,
         name: 'Cradle',
         description: 'Never Lose Sight. One-of-a-kind built in baby monitor right on your phone.',
-        tags: ['UX/UI', 'Branding']
+        tags: ['UX/UI', 'Branding'],
+        image: Cradle
     },
     {
         id: 2,
         name: 'FNTSY',
         description: 'Modern day fantasy app focused on the social aspect of fantasy sports.',
-        tags: ['UX/UI', 'Branding']
+        tags: ['UX/UI', 'Branding'],
+        image: FNTSY
     },
     {
         id: 3,
@@ -86,7 +92,7 @@ export default function SelectedWork() {
                         className="project-preview"
                         ref={(el) => (previewRefs.current[index] = el)}
                     >
-                        <div className="project-placeholder"></div>
+                        <img className="project-image" src={project.image} alt={project.name} />
                     </div>
                 </div>
             ))}

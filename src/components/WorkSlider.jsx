@@ -2,7 +2,13 @@ import React from 'react';
 import Marquee from 'react-fast-marquee';
 import './WorkSlider.css';
 
+//images
+import FNTSY from '../assets/fntsy-project.png';
+import Cradle from '../assets/cradle-project.png';
+
 const WorkSlider = () => {
+    const images = [FNTSY, Cradle]; // Add more images here if you have more!
+
 
     return (
         <div className="work-marquee">
@@ -14,7 +20,7 @@ const WorkSlider = () => {
             >
                 {[...Array(10)].map((_, index) => (
                     <div className="marquee-item" key={index}>
-                        <div className="marquee-box">Project {index + 1}</div>
+                        <img src={images[index % images.length]} alt={`Project ${index + 1}`} />
                     </div>
                 ))}
             </Marquee>

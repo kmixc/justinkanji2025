@@ -6,7 +6,7 @@ import Landing from './pages/Landing';
 import About from './pages/About';
 import Work from './pages/Work';
 import Contact from './pages/Contact';
-import ProjectPage from './pages/ProjectsPage';
+import ProjectPage from './pages/ProjectPage';
 
 // COMPONENTS
 import Nav from './components/Nav';
@@ -27,7 +27,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/work" element={<Work />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/work/:projectId" element={<ProjectPage />} />
+        <Route path="/projects/:id" element={<ProjectPage />} />
       </Routes>
       <Footer />
     </Router>

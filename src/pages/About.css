@@ -1,0 +1,176 @@
+/* ===== General Container ===== */
+.about-hero,
+.about-work-experience,
+.about-resume-download,
+.about-volunteer-work {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    font-family: 'Inter', sans-serif;
+    color: #1D1D1D;
+}
+
+/* ===== Hero Section ===== */
+.about-hero-text p {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.about-hero-text span {
+    color: #BCBCBC;
+}
+
+.about-hero-description {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.about-hero-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.about-hero-description-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+/* ===== Work Experience Section ===== */
+.about-work-experience>p {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.about-work-experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-work-experience-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #1D1D1D;
+    padding-top: 1rem;
+}
+
+.about-work-experience-item:last-child {
+    border-bottom: 1px solid #1D1D1D;
+    padding-bottom: 1rem;
+}
+
+.about-work-experience-item-info p:first-child {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.about-work-experience-item-info p:last-child {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.about-work-experience-item-date p {
+    font-size: 0.9rem;
+    color: #BCBCBC;
+}
+
+/* ===== Resume Download Section ===== */
+.about-resume-download h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.about-resume-download-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+}
+
+.about-resume-download-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.about-resume-download-item img {
+    width: 100px;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.about-resume-download-item p:first-of-type {
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.about-resume-download-item p:last-of-type {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* ===== Volunteer Work Section ===== */
+.about-volunteer-work>p {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.about-volunteer-work-item {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #1D1D1D;
+    padding: 1.5rem 0;
+}
+
+.about-volunteer-work-item:last-child {
+    border-bottom: 1px solid #1D1D1D;
+}
+
+.about-volunteer-work-item .title {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.about-volunteer-work-item .date {
+    font-size: 0.9rem;
+    color: #BCBCBC;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+    .about-hero-text p {
+        font-size: 2rem;
+    }
+
+    .about-hero-description {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-hero-image img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about-work-experience-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .about-volunteer-work-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
